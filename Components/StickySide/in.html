@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+    <link rel="stylesheet" href="StickySide.module.css">
+</head>
+
+<body>
+    <div class="hamburgerIcon" onclick="toggleSidebar()">
+        <img id="menuIcon" src="/assets/Vector2.png" alt="Menu">
+    </div>
+    <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+    <div class="sidebarContainer" id="sidebar">
+        <div class="logoImage">
+            <a href="/">
+                <img src="/public/assets/logo-footer.png" alt="Logo" class="StickySide_logoImage__ZR0-Y logoImage">
+            </a>
+        </div>
+        <hr class="horizontalRule">
+        <div class="accountsContainer">
+            <button class="accountButton active" onclick="selectAccount(1)">
+                <img class="icon" src="/public/assets/user-round.png" alt="User"> Ad Account 1
+            </button>
+            <button class="accountButton" onclick="selectAccount(2)">
+                <img class="icon" src="/public/assets/user-round.png" alt="User"> Ad Account 2
+            </button>
+            <button class="accountButton" onclick="selectAccount(3)">
+                <img class="icon" src="/public/assets/user-round.png" alt="User"> Ad Account 3
+            </button>
+            <button class="accountButton" onclick="selectAccount(4)">
+                <img class="icon" src="/public/assets/user-round.png" alt="User"> Ad Account 4
+            </button>
+            <button class="accountButton" onclick="selectAccount(5)">
+                <img class="icon" src="/public/assets/user-round.png" alt="User"> Ad Account 5
+            </button>
+            <button class="accountButton" onclick="selectAccount(6)">
+                <img class="icon" src="/public/assets/user-round.png" alt="User"> Ad Account 6
+            </button>
+        </div>
+        <hr class="horizontalRule">
+        <button class="accountButton2" onclick="addAccount()">Add New Ad Account</button>
+
+        <div class="StickySide_dropdownSection__Fn1ok ">
+            <div class=" sectionHeader"  onclick="toggleDropdown()">
+                <div class="StickySide_sectionTitle__Ug5PL">Facebook Setting</div>
+                <img src="/public/assets/chevron-down.png" alt="Dropdown Icon" width="20" height="20" id="dropdownIcon" class="StickySide_dropdownIcon__nJDsq dropdownIcon StickySide_rotated__GFFow">
+            </div>
+            <div class="StickySide_dropdownContent__AlNMy" id="dropdownContent" style="display: none;">
+                <div>
+                    <div class="inlineContainer">
+                        <span class="input1 StickySide_input1__nTRm7 StickySide_lab__+f6gW">Ad Account - </span>
+                        <span class="input1 StickySide_input1__nTRm7 StickySide_lab__+f6gW"> </span>
+                        
+                    </div>
+                    <hr class="StickySide_horizontalRule1__+GxR+">
+                </div>
+            </div>
+        </div>
+        
+        <hr class="horizontalRule1">
+        <button class="upgradeButton">Upgrade Plan</button>
+        <div class="footer">1 Ad account on Free Plan</div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('open');
+            document.getElementById('overlay').classList.toggle('show');
+            document.getElementById('menuIcon').src = 
+                document.getElementById('sidebar').classList.contains('open') 
+                ? './assets/x.svg' : './assets/Vector2.png';
+        }
+
+        function toggleDropdown() {
+            var dropdownContent = document.getElementById('dropdownContent');
+            var dropdownIcon = document.getElementById('dropdownIcon');
+            
+            if (dropdownContent.style.display === "none" || dropdownContent.style.display === "") {
+                dropdownContent.style.display = "block";
+            } else {
+                dropdownContent.style.display = "none";
+            }
+            dropdownIcon.classList.toggle('rotated');
+        }
+
+        function selectAccount(num) {
+            document.querySelectorAll('.accountButton').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.accountButton')[num - 1].classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
