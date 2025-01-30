@@ -154,12 +154,12 @@ const LoginPage = () => {
                 {/* Links */}
                 <p className="switchLink">
                     Don’t have an account?{" "}
-                    <Link href="/Signup" className="linkText">
+                    <Link href="/accounts/signup" className="linkText">
                         Register
                     </Link>
                 </p>
                 <p className="switchLink">
-                    <Link href="/PasswordReset" className="linkText">
+                    <Link href="/accounts/password_reset" className="linkText">
                         Forgot your password?
                     </Link>
                 </p>

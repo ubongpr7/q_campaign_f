@@ -63,7 +63,7 @@ const Page = () => {
                     </button>
                 </form>
                 <p className="switchLink">
-                    <Link href="/Login" className="linkText">
+                    <Link href="/accounts/login" className="linkText">
                         Back to Login
                     </Link>
                 </p>

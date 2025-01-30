@@ -28,7 +28,7 @@ const Nav = () => {
                     </ul>
                     <div className="nav-btn-container">
                         {/* <button onClick={() => navigate('/login')}>Login</button> */}
-                        <Link href="/Login" className='linkLogin' >Login</Link>
+                        <Link href="/accounts/login" className='linkLogin' >Login</Link>
                         <a className="no-dec" href="#pricing-section">
                             <button className="get-started">
                                 Get Started

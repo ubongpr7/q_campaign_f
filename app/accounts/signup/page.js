@@ -147,7 +147,7 @@ const RegisterPage = () => {
         {/* Links */}
         <p className="switchLink">
           Already have an account?{" "}
-          <Link href="/Login" className="linkText">
+          <Link href="/accounts/login" className="linkText">
             Sign in
           </Link>
         </p>
