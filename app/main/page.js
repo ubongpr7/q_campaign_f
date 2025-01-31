@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import "/public/Styles/side-menu.css";
-import "/public/Styles/style.css";
-import "/public/Styles/home.css";
+import "../Styles/side-menu.css";
+import "../Styles/style.css";
+import "../Styles/home.css";
 // import "/public/Styles/font.css";
 
 import Header from "@/Components/Header/Header";

@@ -550,15 +550,6 @@
   }
   
   @media (max-width: 520px) {
-    .priceCardContainer{
-      flex-direction: column;
-    }
-    .priceHeading{
-      text-align: center;
-    }
-    .formSection input {
-      min-width: 100%;
-    }
     .p-container {
       margin: 5px auto;
       padding: 5px;
@@ -579,10 +570,6 @@
   
     .goBackIcon {
       margin-right: 10px;
-    }
-    .manageBillingBtn{
-      padding: 0px 10px;
-      font-size: 14px;
     }
   }
   

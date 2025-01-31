@@ -15,19 +15,19 @@ const Pricing = () => {
 
       <Sidebar />
       <Header />
-      <div class="main-container">
+      <div className="main-container">
 
         <main>
-          <div class="pricingSection">
-            <div class="header">
-              <Link href="/main"><img src="/assets/Vector4.png" alt="Go Back" class="goBackIcon"
-                onclick="window.history.back()" /></Link>
-              <p class="priceHeading">Choose the <span>Perfect Plan</span> for Your Needs</p>
+          <div className="pricingSection">
+            <div className="header">
+              <Link href="/main"><img src="/assets/Vector4.png" alt="Go Back" className="goBackIcon"
+                /></Link>
+              <p className="priceHeading">Choose the <span>Perfect Plan</span> for Your Needs</p>
             </div>
-            <p class="priceDesc">Flexible Pricing to Suit Every Advertiser</p>
-            <div class="priceCardContainer">
-              <div class="priceCard popularPlan">
-                <div class="popularPlanWrapper">
+            <p className="priceDesc">Flexible Pricing to Suit Every Advertiser</p>
+            <div className="priceCardContainer">
+              <div className="priceCard popularPlan">
+                <div className="popularPlanWrapper">
                   <p>Most Popular</p>
                   <svg width="70" height="58" viewBox="0 0 70 58" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -36,47 +36,47 @@ const Pricing = () => {
                       fill="#5356FF"></path>
                   </svg>
                 </div>
-                <p class="priceCardPrice">$129.95/month</p>
-                <p class="priceCardAccounts">1 Ad Account</p>
-                <p class="priceCardPlan">Professional Plan</p>
-                <p class="priceCardPlanDesc">Perfect for Individual Advertisers and Small
+                <p className="priceCardPrice">$129.95/month</p>
+                <p className="priceCardAccounts">1 Ad Account</p>
+                <p className="priceCardPlan">Professional Plan</p>
+                <p className="priceCardPlanDesc">Perfect for Individual Advertisers and Small
                   Teams</p>
-                <div class="priceCardFeatureContainer">
-                  <div class="priceCardFeature">
+                <div className="priceCardFeatureContainer">
+                  <div className="priceCardFeature">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
-                      <rect width="24" height="24" rx="12" fill="#378CE7" fill-opacity="0.7"></rect>
-                      <path fill-rule="evenodd" clip-rule="evenodd"
+                      <rect width="24" height="24" rx="12" fill="#378CE7" fillOpacity="0.7"></rect>
+                      <path fillRule="evenodd" clipRule="evenodd"
                         d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z"
                         fill="#EEEEEE"></path>
                     </svg>
                     Upload unlimited ads to 1 ad account.
                   </div>
-                  <div class="priceCardFeature">
+                  <div className="priceCardFeature">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
-                      <rect width="24" height="24" rx="12" fill="#378CE7" fill-opacity="0.7"></rect>
-                      <path fill-rule="evenodd" clip-rule="evenodd"
+                      <rect width="24" height="24" rx="12" fill="#378CE7" fillOpacity="0.7"></rect>
+                      <path fillRule="evenodd" clipRule="evenodd"
                         d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z"
                         fill="#EEEEEE"></path>
                     </svg>
                     Perfect for solo marketers and small teams.
                   </div>
-                  <div class="priceCardFeature">
+                  <div className="priceCardFeature">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
-                      <rect width="24" height="24" rx="12" fill="#378CE7" fill-opacity="0.7"></rect>
-                      <path fill-rule="evenodd" clip-rule="evenodd"
+                      <rect width="24" height="24" rx="12" fill="#378CE7" fillOpacity="0.7"></rect>
+                      <path fillRule="evenodd" clipRule="evenodd"
                         d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z"
                         fill="#EEEEEE"></path>
                     </svg>
                     Access all features and customization tools.
                   </div>
-                  <div class="priceCardFeature">
+                  <div className="priceCardFeature">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
-                      <rect width="24" height="24" rx="12" fill="#378CE7" fill-opacity="0.7"></rect>
-                      <path fill-rule="evenodd" clip-rule="evenodd"
+                      <rect width="24" height="24" rx="12" fill="#378CE7" fillOpacity="0.7"></rect>
+                      <path fillRule="evenodd" clipRule="evenodd"
                         d="M17.0964 7.39016L9.93638 14.3002L8.03638 12.2702C7.68638 11.9402 7.13638 11.9202 6.73638 12.2002C6.34638 12.4902 6.23638 13.0002 6.47638 13.4102L8.72638 17.0702C8.94638 17.4102 9.32638 17.6202 9.75638 17.6202C10.1664 17.6202 10.5564 17.4102 10.7764 17.0702C11.1364 16.6002 18.0064 8.41016 18.0064 8.41016C18.9064 7.49016 17.8164 6.68016 17.0964 7.38016V7.39016Z"
                         fill="#EEEEEE"></path>
                     </svg>
