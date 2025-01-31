@@ -1,296 +1,173 @@
-"use client"
-import { useState, useEffect } from "react";
-import SetupAdAccountModal from "@/Components/Modals/SetupAdAccountModal";
-import CampaignForm from "@/Components/Forms/CampaignForm";
-import ConfigForm from "@/Components/Forms/ConfigForm";
-import ProgressBar from "@/Components/ProgressBar/ProgressBar";
-import SuccessScreen from "@/Components/SuccessScreen";
+"use client";
+import React, { useState, useEffect } from "react";
+import "/public/Styles/side-menu.css";
+import "/public/Styles/style.css";
+import "/public/Styles/home.css";
+import "/public/Styles/font.css";
 
-const mockCampaigns = [
-  { id: "1", name: "Campaign 1", status: "ACTIVE", objective: "OUTCOME_SALES" },
-  { id: "2", name: "Campaign 2", status: "PAUSED", objective: "OUTCOME_LEADS" },
-];
+import Header from "@/Components/Header/Header";
+import Sidebar from "@/Components/Sidebar/Sidebar";
 
-const getDefaultStartTime = () => {
-  const startTime = new Date();
-  startTime.setUTCDate(startTime.getUTCDate() + 1);
-  startTime.setUTCHours(4, 0, 0, 0);
-  return startTime.toISOString().slice(0, 16);
-};
+const Page = () => {
+  const [selectedObjective, setSelectedObjective] = useState("Website Conversions");
+  const [selectedCampaign, setSelectedCampaign] = useState("new");
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [dropdownOption, setDropdownOption] = useState("Select Options");
 
-const getDefaultEndTime = () => {
-  const endTime = new Date();
-  endTime.setUTCDate(endTime.getUTCDate() + 2);
-  endTime.setUTCHours(4, 0, 0, 0);
-  return endTime.toISOString().slice(0, 16);
-};
+  const campaignOptions = [
+    "findproccesserror",
+    "LIVE APP",
+    "instagram screencast",
+    "14 jan test 2",
+    "cozybondz____",
+    "Test(Newton)",
+    "14 january - test with newton",
+  ];
 
-const Main = ({ activeAccount, setActiveAccount }) => {
-  const [formId, setFormId] = useState("mainForm");
-  const [previousForm, setPreviousForm] = useState("mainForm");
-  const [progress, setProgress] = useState(0);
-  const [stepVisible, setStepVisible] = useState(false);
-  const [selectedObjective, setSelectedObjective] = useState("website");
-  const [campaignType, setCampaignType] = useState("new");
-  const [existingCampaigns, setExistingCampaigns] = useState(mockCampaigns);
-  const [selectedCampaign, setSelectedCampaign] = useState("");
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [showModal, setShowModal] = useState(() => activeAccount ? !activeAccount.is_bound : false);
-
-  useEffect(() => {
-    setShowModal(prev => (activeAccount && !activeAccount.is_bound ? true : false));
-  }, [activeAccount]);
-
-  useEffect(() => {
-    if (activeAccount) {
-      resetForm();
-    }
-  }, [activeAccount]);
-
-  const resetForm = () => {
-    setFormId("mainForm");
-    setCampaignType("new");
-    setExistingCampaigns(mockCampaigns);
-    setSelectedCampaign("");
-  };
-
-  const handleObjectiveSelect = (objective) => {
+  const handleObjectiveClick = (objective) => {
     setSelectedObjective(objective);
-    setSelectedCampaign("");
-    setConfig((prevConfig) => ({
-      ...prevConfig,
-      objective: objective === "website" ? "OUTCOME_SALES" :
-        objective === "lead" ? "OUTCOME_LEADS" :
-          "OUTCOME_TRAFFIC",
-    }));
   };
 
-  const handleCampaignTypeSelect = (type) => {
-    setCampaignType(type);
-    if (type === "existing") {
-      setExistingCampaigns(mockCampaigns);
-    }
+  const handleCampaignClick = (campaign) => {
+    setSelectedCampaign(campaign);
+    setDropdownVisible(campaign === "existing"); // Only show dropdown for "existing"
   };
 
-  const handleCampaignSelect = (event) => {
-    setSelectedCampaign(event.target.value);
-    setDropdownOpen(false);
+  const handleOptionSelect = (option) => {
+    setDropdownOption(option); // Set selected option
+    setDropdownVisible(false); // Hide dropdown after selection
   };
 
-  const [step, setStep] = useState("");
-  const [config, setConfig] = useState({
-    objective: "OUTCOME_SALES",
-    campaign_budget_optimization: "AD_SET_BUDGET_OPTIMIZATION",
-    budget_value: "50.73",
-    campaign_bid_strategy: "LOWEST_COST_WITHOUT_CAP",
-    buying_type: "AUCTION",
-    object_store_url: "",
-    location: "GB",
-    age_range_min: "30",
-    age_range_max: "65",
-    gender: "All",
-    app_events: getDefaultStartTime(),
-    ad_creative_primary_text: "",
-    ad_creative_headline: "",
-    ad_creative_description: "",
-    call_to_action: "SHOP_NOW",
-    destination_url: "",
-    url_parameters: "",
-    ad_set_budget_value: "50.73",
-    ad_format: "Single image or video",
-    bid_amount: "5.0",
-    end_time: getDefaultEndTime(),
-    ad_set_bid_strategy: "LOWEST_COST_WITHOUT_CAP",
-    prediction_id: "",
-    placement_type: "advantage_plus",
-    platforms: {
-      facebook: true,
-      instagram: true,
-      audience_network: true,
-      messenger: true,
-    },
-    placements: {
-      feeds: true,
-      stories: true,
-      in_stream: true,
-      search: true,
-      apps_sites: true,
-      messages: true,
-    },
-  });
+  // Toggle dropdown visibility
+  const toggleDropdown = (e) => {
+    e.stopPropagation(); // Prevents click-outside from closing it
+    setDropdownVisible((prev) => !prev); // Toggle visibility state
+  };
 
-  const handleShowForm = (formId) => {
-    if (!activeAccount || !activeAccount.is_bound) {
-      toast.warning("Please connect an ad account to create campaigns.");
-      return;
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (!document.querySelector(".dropdownContainer")?.contains(e.target)) {
+        setDropdownVisible(false); // Close dropdown if clicked outside
+      }
+    };
+
+    if (dropdownVisible) {
+      document.addEventListener("click", handleClickOutside);
+    } else {
+      document.removeEventListener("click", handleClickOutside);
     }
 
-    if (campaignType === "existing" && formId === "next" && !selectedCampaign) {
-      toast.warning("Please select an existing campaign before proceeding.");
-      return;
-    }
-
-    setPreviousForm(formId);
-    setFormId(
-      campaignType === "new" && formId === "next" ? "newCampaignForm" :
-        campaignType === "existing" && formId === "next" ? "existingCampaignForm" :
-          formId
-    );
-  };
-
-  const handleEditConfig = () => {
-    setPreviousForm(formId);
-    setFormId("configForm");
-  };
-
-  const handleSaveConfig = (newConfig) => {
-    setConfig(newConfig);
-    setFormId(previousForm);
-  };
-
-  const handleCancelConfig = () => {
-    setFormId(previousForm);
-  };
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [dropdownVisible]);
 
   return (
-    <>
-      <link rel="stylesheet" href="/Styles/MainStyles.module.css" />
-
-      <div className="container">
-        {formId === "mainForm" && (
-          <div className="formContainer">
-            <h2 className="heading">Choose Campaign Objective</h2>
-            <div className="objectiveContainer">
-              {["website", "lead", "traffic"].map((objective) => (
-                <div
-                  key={objective}
-                  className={`objective ${selectedObjective === objective ? "selected" : ""}`}
-                  onClick={() => handleObjectiveSelect(objective)}
-                >
-                  <div className="icon">
-                    <img
-                      src="/assets/Device-Tablet-Search--Streamline-Tabler.png"
-                      alt={`${objective} icon`}
-                    />
-                  </div>
-                  <div className="content">
-                    <h3>{objective.charAt(0).toUpperCase() + objective.slice(1)}</h3>
-                    <p>Description for {objective} campaigns.</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <h2 className="heading">Configure Your Campaign</h2>
-            <div className="campaignTypeContainer">
-              {["new", "existing"].map((type) => (
-                <button
-                  key={type}
-                  className={`campaignTypeButton ${campaignType === type ? "selected" : ""}`}
-                  onClick={() => handleCampaignTypeSelect(type)}
-                >
-                  <img
-                    className="buttonIcon"
-                    src={`/assets/${type}-icon.png`}
-                    alt={`${type} campaign`}
-                  />
-                  {type.charAt(0).toUpperCase() + type.slice(1)} Campaign
-                </button>
-              ))}
-            </div>
-
-            {campaignType === "existing" && existingCampaigns.length > 0 && (
-              <div className="dropdownContainer">
-                <div className="customDropdown">
-                  <div
-                    className="dropdownHeader"
-                    onClick={() => setDropdownOpen(!dropdownOpen)}
-                  >
-                    {selectedCampaign
-                      ? existingCampaigns.find((campaign) => campaign.id === selectedCampaign).name
-                      : "Select a campaign"}
-                  </div>
-                  {dropdownOpen && (
-                    <div className="dropdownList">
-                      {existingCampaigns.map((campaign) => (
-                        <div
-                          key={campaign.id}
-                          className="dropdownItem"
-                          onClick={() => handleCampaignSelect({ target: { value: campaign.id } })}
-                        >
-                          <input
-                            type="checkbox"
-                            checked={selectedCampaign === campaign.id}
-                            onChange={() => handleCampaignSelect({ target: { value: campaign.id } })}
-                          />
-                          <span>{campaign.name}</span>
-                        </div>
-                      ))}
+    <div>
+      <div className="main-container">
+        <Sidebar />
+        <div className="main-content" id="content">
+          <Header />
+          <main>
+            <div className="content">
+              <div className="form-container">
+                <h2 className="form-heading">Choose Campaign Objective</h2>
+                <div className="objectiveContainer">
+                  {[
+                    {
+                      title: "Website Conversions",
+                      description:
+                        "Send people to your website and track conversions using the FB Pixel.",
+                      imgSrc: "/assets/Website-Ad--Streamline-Atlas.png",
+                    },
+                    {
+                      title: "Lead Form Campaign",
+                      description:
+                        "Capture leads using instant forms from your ad account.",
+                      imgSrc: "/assets/Device-Tablet-Search--Streamline-Tabler.png",
+                    },
+                    {
+                      title: "Traffic Campaign",
+                      description:
+                        "Drive more visitors to your website through targeted traffic campaigns.",
+                      imgSrc: "/assets/Click--Streamline-Tabler.png",
+                    },
+                  ].map((item, index) => (
+                    <div
+                      key={index}
+                      className={`objective ${
+                        selectedObjective === item.title ? "objective-select" : ""
+                      }`}
+                      onClick={() => handleObjectiveClick(item.title)}
+                    >
+                      <div className="objective-icon">
+                        <img src={item.imgSrc} alt={item.title} />
+                      </div>
+                      <div className="content">
+                        <h3>{item.title}</h3>
+                        <p>{item.description}</p>
+                      </div>
                     </div>
-                  )}
+                  ))}
                 </div>
+
+                <h2 className="heading">Configure Your Campaign</h2>
+                <div className="campaignTypeContainer">
+                  <button
+                    className={`campaignTypeButton ${
+                      selectedCampaign === "new" ? "campaignSelect" : ""
+                    }`}
+                    onClick={() => handleCampaignClick("new")}
+                  >
+                    <img src="/assets/Component 2.png" alt="New Campaign" />
+                    New Campaign
+                  </button>
+                  <button
+                    className={`campaignTypeButton ${
+                      selectedCampaign === "existing" ? "campaignSelect" : ""
+                    }`}
+                    onClick={() => handleCampaignClick("existing")}
+                  >
+                    <img src="/assets/Component 2 (1).png" alt="Existing Campaign" />
+                    Existing Campaign
+                  </button>
+                </div>
+
+                {/* Dropdown for Existing Campaign */}
+                {selectedCampaign === "existing" && (
+                  <div className="dropdownContainer">
+                    <div className="dropdownHeader" onClick={toggleDropdown}>
+                      {dropdownOption} {/* Displays the currently selected option */}
+                    </div>
+                    {dropdownVisible && (
+                      <div className="dropdownList">
+                        {campaignOptions.map((option, index) => (
+                          <div
+                            key={index}
+                            className="dropdownItem"
+                            onClick={() => handleOptionSelect(option)}
+                          >
+                            {option}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                <button
+                  className="nextButton"
+                  onClick={() => (window.location.href = "CampaignForm.html")}
+                >
+                  Next
+                </button>
               </div>
-            )}
-
-            <button
-              className="nextButton"
-              onClick={() => handleShowForm("next")}
-            >
-              Next
-            </button>
-          </div>
-        )}
-
-        {formId === "newCampaignForm" && (
-          <CampaignForm
-            formId="newCampaign"
-            onSubmit={() => toast.success("Mock submission successful!")}
-            onEditConfig={handleEditConfig}
-            onGoBack={() => handleShowForm("mainForm")}
-            isNewCampaign={true}
-            activeAccount={activeAccount}
-            objective={config.objective}
-          />
-        )}
-
-        {formId === "existingCampaignForm" && (
-          <CampaignForm
-            formId="existingCampaign"
-            onSubmit={() => toast.success("Mock submission successful!")}
-            onEditConfig={handleEditConfig}
-            onGoBack={() => handleShowForm("mainForm")}
-            isNewCampaign={false}
-            activeAccount={activeAccount}
-            campaignId={selectedCampaign}
-            objective={config.objective}
-          />
-        )}
-
-        {formId === "configForm" && (
-          <ConfigForm
-            activeAccount={activeAccount}
-            initialConfig={config}
-            onSaveConfig={handleSaveConfig}
-            onCancel={handleCancelConfig}
-            isNewCampaign={previousForm === "newCampaignForm"}
-          />
-        )}
-
-        {formId === "progress" && (
-          <div className="progressContainer">
-            <ProgressBar progress={progress} step={step} stepVisible={stepVisible} />
-            <button className="cancelButton" onClick={() => setFormId("mainForm")}>
-              Cancel
-            </button>
-          </div>
-        )}
-
-        {formId === "successScreen" && (
-          <SuccessScreen onGoBack={() => handleShowForm("mainForm")} />
-        )}
+            </div>
+          </main>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
-export default Main;
+export default Page;

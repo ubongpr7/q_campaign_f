@@ -1,91 +1,153 @@
-/* General Container Styles */
 .formContainer {
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  width: 100%; /* Make the container width 100% */
-  max-width: 600px; /* Max width remains 600px */
-  margin: 20px auto; 
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box; /* Ensure padding is included in the width */
-  overflow-y: auto; /* Enable vertical scrolling */
-}
-
-/* Parent Container Styling */
-.parentContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0; /* Ensure no extra padding */
-  margin: 0; /* Ensure no extra margins */
-}
-
-/* Header Styles */
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-}
-
-.goBackIcon {
-  cursor: pointer;
-  margin-right: 15px;
-  width: 10px;
-  height: 16px;
-  margin-bottom: 10px;
-}
-
-/* Title and Subtitle Styles */
-.title {
-  font-size: 24px;
-  font-weight: 500;
-  color: #000000;
   margin: 0;
 }
 
-.subtitle {
-  font-size: 14px;
-  color: #666;
+.inputField,
+.textareaField,
+.selectField {
+  width: 100%;
+  max-width: 500px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  /* Ensure consistent text color */
+}
+
+.fieldsetContainer {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.legendText {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.labelText {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  /* Ensure consistent text color */
+}
+
+.title {
   text-align: center;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.ageRangeContainer {
+  display: flex;
+  align-items: center;
+}
+
+.ageRangeSeparator {
+  margin: 0 10px;
+  font-size: 0.9em;
+}
+
+.manualOptions {
+  display: flex;
+  flex-direction: column;
+  /* Stack placements vertically */
+  margin-bottom: 20px;
+  /* Extra space between platforms */
+}
+
+.optionContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.optionHeading {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.MuiCheckbox-root {
+  color: #5356FF;
+}
+
+.MuiCheckbox-root.Mui-checked {
+  color: #5356FF !important;
+}
+
+.button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 600;
+}
+
+.budgetOptimizationToggle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 30px;
   width: 100%;
 }
 
-/* Tutorial Video Styling */
-.tutorialVideo {
-  width: 80%;
-  height: 250px;
-  background-color: #e0e0e0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px auto;
-  font-weight: 400;
-  font-size: 22px;
+.toggleButton {
+  flex: 0 0 auto;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #5356FF;
+  margin-right: 0;
+}
+
+.toggleButton:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.lastButton {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.optimizationLabel {
+  font-size: 14px;
   color: #050315B2;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-top: 10px;
+  display: block;
 }
 
-.formSectionsContainer {
-  border: 1px solid #ccc; 
-  border-radius: 8px;
-  background-color: #fff;
-  margin: 0 auto; /* Center container */
-  width: 100%; /* Full width of the parent container */
-  max-width: 600px; /* Define a maximum width to prevent overflow */
-  box-sizing: border-box; /* Include padding/border in width calculations */
+.toggleButton.active {
+  background-color: #5356FF;
+  color: #fff;
 }
 
-
-/* Section Box Styles */
 .sectionBox {
-  padding: 0 15px; /* Padding inside each section box */
+  padding: 0 15px;
 }
 
 .sectionHeader {
@@ -100,8 +162,8 @@
   margin: 0;
   font-size: 18px;
   font-weight: 400;
-  color:#1E1E1E;
-  padding: 10px 0;
+  color: #1E1E1E;
+  margin-bottom: 10px;
 }
 
 .toggleIcon {
@@ -115,115 +177,62 @@
 }
 
 .sectionContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 15px 0;
 }
 
 .sectionDivider {
   border-top: 1px solid #ccc;
-  margin: 0;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
-/* Upload Box Styling */
-.uploadBox {
-  width: 100%;
-  height: 200px;
-  border: 2px dashed #19191980;
+.column {
+  flex: 0 0 48%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  cursor: pointer;
+  flex-direction: column;
   margin-bottom: 20px;
-  position: relative;
-  background-color: #EEEEEE;
 }
 
-.uploadIcon {
-  position: absolute;
-  top: 20px;
-  width: 40px;
-  height: 40px;
-  margin-top: 25px;
-}
-
-.uploadBox p {
-  color: #050315B2;
-  margin-top: 100px; 
-  margin-bottom: 35px;
-}
-
-.hiddenFileInput {
-  display: none;
-}
-
-/* Input Field Styling */
-.inputField {
-  width: 100%; /* Ensure input fields are 100% width */
-  max-width: 420px; /* Maximum width of 420px */
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.column label {
+  font-size: 14px;
+  color: #1E1E1E;
+  margin-bottom: 5px;
   text-align: left;
-  box-sizing: border-box;
 }
 
-/* Button Container Styling */
-.buttonContainer {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+.column input,
+.column select {
   width: 100%;
-  margin-top: 20px;
-}
-
-.createAdButton, .goBackButton {
-  margin-right: 10px;
-  background-color: #5356FF;
-  color: white;
-  border: none;
-  padding: 8px 16px;
+  padding: 10px;
+  font-size: 14px;
   border-radius: 5px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 13px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-weight: 600;
-  height: 40px;
-  line-height: normal;
+  box-sizing: border-box;
+  color: #333;
+  /* Ensure consistent text color */
 }
 
-.createAdButton:hover {
-  background-color: #4044C9;
+/* Additional styles for the Placements section */
+.placementToggle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
-.goBackButton {
-  background-color: #050315;
+.placementToggle .toggleButton {
+  padding: 8px 16px;
 }
 
-.goBackButton:hover {
-  background-color: #0e0933;
-}
-
-/* Responsive Styling */
-@media (max-width: 520px) {
-  .formContainer {
-    width: 100%; /* Ensure it fits within the parent container */
-    padding: 15px; /* Adjust padding for smaller screens */
-  }
-
-  .header h2 {
-    font-size: 20px;
-  }
-
-  .inputField {
-    width: 100%; /* Make input fields full width */
-  }
+.manualOptions.disabled {
+  opacity: 0.5;
 }
 
 @media (max-width: 768px) {
   .column {
-    flex: 0 0 100%; /* Switch to a single-column layout */
+    flex: 0 0 100%;
+    /* Make columns full width on smaller screens */
   }
 }
 
@@ -232,9 +241,10 @@
     font-size: 12px;
     padding: 8px 12px;
   }
-  
+
   .sectionHeader h3 {
     font-size: 14px;
+    margin-bottom: 0px;
   }
 
   .column label {
@@ -246,19 +256,72 @@
     font-size: 12px;
     padding: 8px;
   }
-}
 
-@media (max-width: 520px) {
-  .createAdButton, .goBackButton {
-    font-size: 11px; /* Adjust font size for smaller screens */
-    padding: 4px 12px; /* Adjust padding for smaller screens */
-    height: 36px; /* Adjust height for smaller screens */
+  .optimizationLabel {
+    font-size: 12px;
+    margin-left: 10px;
   }
 }
 
-@media (min-width: 630px) {
-  .formSectionsContainer {
-    min-width: 550px;
+@media (max-width: 768px) {
+  .manualOptions {
+    flex-direction: column;
+    /* Keep placements in a single column on smaller screens */
   }
-  
+}
+
+@media (min-width: 769px) {
+  .manualOptions {
+    flex-direction: column;
+    /* Still a single column on larger screens */
+  }
+}
+
+.sectionDivider2 {
+  border: 0;
+  border-top: 1px solid #ccc;
+  height: 0;
+  width: 100%;
+  margin: 16px 0;
+}
+
+.platformContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .platformContainer {
+    flex-direction: row;
+    /* Ensure platforms are in a row on smaller screens */
+    flex-wrap: wrap;
+    /* Allow wrapping if necessary */
+  }
+
+  .platformContainer .MuiFormControlLabel-root {
+    margin-right: 10px;
+    /* Add some spacing between items in the row */
+  }
+}
+
+.platformContainer.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.blurredField {
+  opacity: 0.5;
+  pointer-events: none;
+  /* Prevent interaction */
+}
+
+.disabledButton {
+  background-color: #d3d3d3;
+  /* Grey background */
+  color: #808080;
+  /* Grey text */
+  cursor: not-allowed;
+  /* Disabled cursor */
+  opacity: 0.6;
 }
