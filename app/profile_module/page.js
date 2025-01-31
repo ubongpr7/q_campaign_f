@@ -60,7 +60,7 @@ const Page = () => {
                                         className="goBackIcon"
                                         onClick={() => window.history.back()}
                                     /> */}
-                                    <Link href="/Main"><img src="/assets/arrow-left.png" alt="Go Back" className="goBackIcon"/></Link>
+                                    <Link href="/main"><img src="/assets/arrow-left.png" alt="Go Back" className="goBackIcon"/></Link>
                                     <h2>Profile Management</h2>
                                 </div>
                                 <div className="profileContent">

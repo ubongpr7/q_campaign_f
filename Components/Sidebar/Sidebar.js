@@ -18,7 +18,7 @@ const Sidebar = () => {
         <div id="menu" className="sidebarContainer">
             <div>
                 <div>
-                    <Link href="/Main">
+                    <Link href="/main">
                         <img src="/assets/logo-footer.png" alt="Logo" className="logoImage" />
                     </Link>
                 </div>
@@ -66,7 +66,7 @@ const Sidebar = () => {
             </div>
             <div>
                 {/* Correct usage of Link */}
-                <Link href="/Pricing" className="linktag upgradeButton">
+                <Link href="/pricing" className="linktag upgradeButton">
                     Upgrade Plan
                 </Link>
                 <div className="footer">10 Ad accounts on enterprise plan</div>

@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import "./LandingStyles.css"
 import Nav from '../NavBar/Nav';
 import Footer from '../Footer/Footer';
+import Link from 'next/link';
 
 const handleFaqClick = (e) => {
   const faqHeading = e.target.closest('.faq-single-heading');
@@ -273,7 +274,7 @@ const Landing = () => {
                 Test the software risk-free before committing.
               </div>
             </div>
-            <button className="price-start-btn" onClick={() => handleSubscribe('Free Trial')}>Get Started</button>
+            <Link href="/accounts/signup"><button className="price-start-btn">Get Started</button></Link>
           </div>
           <div className="price-card popular-plan">
             <div className="popular-plan-wrapper">
@@ -320,7 +321,8 @@ const Landing = () => {
                 Receive dedicated support for ad management.
               </div>
             </div>
-            <button className="price-start-btn" onClick={() => handleSubscribe('Professional')}>Get Started</button>
+            <Link href="/accounts/signup"><button className="price-start-btn">Get Started</button></Link>
+
           </div>
           <div className="price-card popular-plan enterprise-plan">
             <div className="popular-plan-wrapper enterprise-plan-wrapper">
@@ -365,7 +367,7 @@ const Landing = () => {
                 Receive dedicated support for ad management.
               </div>
             </div>
-            <button className="price-start-btn" onClick={() => handleSubscribe('Enterprise')}>Get Started</button>
+            <Link href="/accounts/signup"><button className="price-start-btn">Get Started</button></Link>
           </div>
         </div>
       </div>

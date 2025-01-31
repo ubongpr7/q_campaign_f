@@ -20,7 +20,7 @@ const Pricing = () => {
         <main>
           <div class="pricingSection">
             <div class="header">
-              <Link href="/Main"><img src="/assets/Vector4.png" alt="Go Back" class="goBackIcon"
+              <Link href="/main"><img src="/assets/Vector4.png" alt="Go Back" class="goBackIcon"
                 onclick="window.history.back()" /></Link>
               <p class="priceHeading">Choose the <span>Perfect Plan</span> for Your Needs</p>
             </div>
@@ -83,11 +83,11 @@ const Pricing = () => {
                     Receive dedicated support for ad management.
                   </div>
                 </div>
-                <Link href="/Success" className='linktag'> <button className='priceStartBtn'>Upgrade</button> </Link>
+                <Link href="/success" className='linktag'> <button className='priceStartBtn'>Upgrade</button> </Link>
 
               </div>
             </div>
-            <Link href="/Main" className='goBackButton linktag'>Go Back</Link>
+            <Link href="/main" className='goBackButton linktag'>Go Back</Link>
           </div>
 
         </main>

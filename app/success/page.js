@@ -24,7 +24,7 @@ const page = () => {
                     Thank you for your subscription. Your journey towards effective ad management starts
                     now!
                   </p>
-                  <Link  href="/Main" className='linktag'><button className='successButton' >Go Home</button></Link>
+                  <Link  href="/main" className='linktag'><button className='successButton' >Go Home</button></Link>
                 </div>
               </div>
 

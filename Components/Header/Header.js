@@ -19,8 +19,7 @@ const Header = () => {
                     <Image src="/assets/no-profile-picture-15257.svg" alt="Profile" width={40} height={40} id="profile" />
                     <div className={`dropdown-menu ${dropdownOpen ? 'open' : ''}`}>
                         <div className="dropdown-item1">Active Ad Accounts: 10</div>
-                        {/* <div className="dropdown-item" onClick={() => window.location.href = '/ProfileModule.html'}>Manage Subscription</div> */}
-                        <Link href="/ProfileModule" className=" linktag "><div className="dropdown-item ">Manage Subscription</div></Link>
+                        <Link href="/profile_module" className=" linktag "><div className="dropdown-item ">Manage Subscription</div></Link>
                         <Link href="/" className="linktag"><div className="dropdown-item">Log Out</div></Link>
                     </div>
                 </div>
