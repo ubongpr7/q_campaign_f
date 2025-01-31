@@ -146,9 +146,9 @@ const LoginPage = () => {
                     {!formData.recaptcha && <p className="error">Please verify reCAPTCHA</p>} */}
 
                     {/* Submit Button */}
-                    <button type="submit" className="option-button">
+                    <Link href="/Main"><button type="submit" className="option-button">
                         Sign In
-                    </button>
+                    </button></Link>
                 </form>
 
                 {/* Links */}

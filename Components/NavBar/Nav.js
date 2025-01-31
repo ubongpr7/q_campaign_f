@@ -20,11 +20,11 @@ const Nav = () => {
                 <div className="nav-menu-btn-container">
                     <span className="close-sidebar" onClick={handleCloseSidebarClick}>&times;</span>
                     <ul>
-                        <li><a href="#" className="active-tab">Home</a></li>
-                        <li><a href="#benefit-section">Benefits</a></li>
-                        <li><a href="#pricing-section">Pricing</a></li>
-                        <li><a href="#faq-section">FAQ’s</a></li>
-                        <li><a href="#contact-section">Contact</a></li>
+                        <li><Link href="#" className="active-tab">Home</Link></li>
+                        <li><Link href="/#benefit-section">Benefits</Link></li>
+                        <li><Link href="/#pricing-section">Pricing</Link></li>
+                        <li><Link href="/#faq-section">FAQ’s</Link></li>
+                        <li><Link href="/#contact-section">Contact</Link></li>
                     </ul>
                     <div className="nav-btn-container">
                         {/* <button onClick={() => navigate('/login')}>Login</button> */}
