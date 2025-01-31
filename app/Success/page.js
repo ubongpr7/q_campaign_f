@@ -14,9 +14,7 @@ const page = () => {
       <Sidebar />
       <Header />
       <div class="main-container">
-        
-        <div class="main-content" id="content">
-          
+        <div class="main-content" id="content"> 
           <main>
             <div class="content">
               <div class="paymentSuccess">

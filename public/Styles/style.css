@@ -47,7 +47,7 @@ main {
 
 /* Nav Porfile Toggle Dropdown */
 .dropdown-menu {
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     position: absolute;
     top: 60px;
     right: 50px;
@@ -64,7 +64,7 @@ main {
 
 .dropdown-menu.open {
     display: block;
-    
+
     /* Show when 'open' class is added */
 }
 
@@ -74,12 +74,17 @@ main {
     font-size: 14px;
     color: #333;
     margin: 2px;
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+}
+
+.linktag {
+    text-decoration: none;
 
 }
 
 .dropdown-item1 {
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
     padding: 10px 15px;
     white-space: nowrap;

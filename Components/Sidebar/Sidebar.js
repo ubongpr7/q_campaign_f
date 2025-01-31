@@ -42,7 +42,7 @@ const Sidebar = () => {
                 </button>
                 <div className="dropdownSection">
                     <div className="sectionHeader" onClick={toggleDropdown}>
-                        <div className="sectionTitle">Facebook Setting</div>
+                        <div className="sectionTitle inputtext">Facebook Setting</div>
                         <Image
                             src="/assets/chevron-down.png"
                             alt="Dropdown Icon"
