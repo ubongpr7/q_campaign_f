@@ -3,7 +3,9 @@
 :root {
     --font-primary: "Poppins", sans-serif;
 }
-
+.forclr{
+    background-color: #fff;
+}
 .paymentSuccess {
     display: flex;
     justify-content: flex-start;

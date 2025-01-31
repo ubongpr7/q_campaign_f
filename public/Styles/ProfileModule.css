@@ -1,8 +1,7 @@
-.container {
+.p-container {
     width: 100%;
     max-width: 700px;
-    margin: 20px auto;
-    /* Adjust margin to be responsive */
+    margin: 20px auto; /* Adjust margin to be responsive */
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -11,56 +10,56 @@
     font-family: 'Poppins', sans-serif;
     flex-direction: column;
     /* align-items: center; */
-}
-
-.header {
+  }
+  
+  .header {
     font-family: 'Poppins', sans-serif;
     display: flex;
     align-items: center;
     justify-content: start !important;
     margin-bottom: 20px;
-
-}
-
-.goBackIcon {
+  
+  }
+  
+  .goBackIcon {
     cursor: pointer;
     margin-right: 10px;
     width: 30px;
     height: 26px;
     object-fit: contain;
-}
-
-
-.footer {
+  }
+  
+  
+  .footer {
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
-}
-
-.profileContent {
+  }
+  
+  .profileContent {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.section {
+  }
+  
+  .section {
     width: 100%;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    border: 1px solid #ddd;
+    border : 1px solid #ddd;
     border-radius: 10px;
-}
-
-.section h3 {
+  }
+  
+  .section h3{
     border-bottom: 1px solid #ddd;
     padding: 0px 10px 10px 10px;
-}
-
-.profilePicWrapper {
+  }
+  
+  .profilePicWrapper {
     position: relative;
     margin-bottom: 10px;
     display: flex;
@@ -70,80 +69,80 @@
     border-radius: 10px;
     cursor: pointer;
     text-align: center;
-}
-
-.formSection {
+  }
+  
+  .formSection {
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     padding: 10px 10px 0px 10px;
-}
-
-.formSection input {
+  }
+  
+  .formSection input {
     min-width: 580px;
-}
-
-.placeholder {
+  }
+  
+  .placeholder {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #666;
     font-size: 14px;
-}
-
-.placeholderIcon {
+  }
+  
+  .placeholderIcon {
     width: 120px;
     height: 120px;
     object-fit: contain;
     margin-bottom: 5px;
-}
-
-.profilePic {
+  }
+  
+  .profilePic {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-}
-
-.hiddenFileInput {
+  }
+  
+  .hiddenFileInput {
     position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0;
     cursor: pointer;
-}
-
-.profilePicSection {
-    display: flex;
-    align-items: center;
-}
-
-.uploadText {
+  }
+  
+  .profilePicSection{
+   display:flex;
+   align-items: center;
+  }
+  
+  .uploadText{
     padding-left: 10px;
     display: flex;
     align-items: center;
     gap: 2px;
-}
-
-.uploadText img {
+  }
+  
+  .uploadText img {
     width: 20px;
     height: 20px;
     object-fit: contain;
-}
-
-.fileHint {
+  }
+  
+  .fileHint {
     font-size: 12px;
     color: #111111B2;
     opacity: 70%;
     margin-bottom: 10px;
     padding-left: 10px;
-}
-
-.label {
+  }
+  
+  .label {
     margin-bottom: 5px;
-}
-
-.profileInput {
+  }
+  
+  .profileInput {
     width: 500px;
     max-width: 90%;
     padding: 10px;
@@ -153,16 +152,16 @@
     text-align: left;
     box-sizing: border-box;
     height: 40px;
-}
-
-.buttonContainer {
+  }
+  
+  .buttonContainer {
     display: flex;
     justify-content: flex-end;
     width: 100%;
     gap: 10px;
-}
-
-.button {
+  }
+  
+  .button {
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
@@ -173,117 +172,114 @@
     align-items: center;
     justify-content: center;
     gap: 4px;
-}
-
-.dangerButton {
+  }
+  
+  .dangerButton {
     background-color: #dc3545;
     color: #fff;
-}
-
-.primaryButton {
+  }
+  
+  .primaryButton {
     background-color: #007bff;
     color: #fff;
-}
-
-
-.primaryButton {
+  }
+  
+  
+  .primaryButton {
     background-color: #5356FF;
-
-}
-
-.primaryButton:hover {
+    
+  }
+  .primaryButton:hover{
     background-color: #4044C9;
-}
-
-.secondaryButton {
+  }
+  .secondaryButton {
     background-color: #fc443b;
-}
-
-.secondaryButton:hover {
-    background-color: #ff0f03;
-}
-
-.goBackButton {
+  }
+  
+  .secondaryButton:hover{
+    background-color: #ff0f03; 
+  }
+  .goBackButton {
     background-color: #5356FF;
-}
-
-.goBackButton:hover {
+  }
+  
+  .goBackButton:hover{
     background-color: #4044C9;
-}
-
-.infoText {
+  }
+  
+  .infoText{
     text-align: center;
-}
-
-.infoText h2 {
+  }
+  
+  .infoText h2 {
     display: flex;
     align-items: center;
     gap: 4px;
-}
-
-.dangerButton {
+  }
+  
+  .dangerButton {
     background-color: #ff4d4f;
-}
-
-.dangerButton:hover {
+  }
+  
+  .dangerButton:hover {
     background-color: #d9363e;
-}
-
-/* profile management */
-.subscriptionDetails {
+  }
+  
+  /* profile management */
+  .subscriptionDetails {
     font-family: "Arial", sans-serif;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 100%;
+    width : 100%;
     max-width: 850px !important;
     margin: 20px auto;
     background-color: #fff;
-}
-
-.subscriptionHeader {
+  }
+  
+  .subscriptionHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 8px;
     border-bottom: 1px solid #ddd;
     padding: 18px;
-}
-
-.subscriptionHeader h2 {
+  }
+  
+  .subscriptionHeader h2 {
     font-size: 20px;
     font-weight: 600;
     margin: 0;
-}
-
-.manageBillingBtn {
+  }
+  
+  .manageBillingBtn {
     background-color: transparent;
     border: 1px solid #000;
     border-radius: 20px;
     padding: 5px 15px;
     cursor: pointer;
     font-size: 18px;
-}
-
-.subscriptionContent {
+  }
+  
+  .subscriptionContent {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 10px 10px 10px 10px;
-}
-
-.detailItem {
+  }
+  
+  .detailItem {
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.detailItem span {
+  }
+  
+  .detailItem span {
     font-size: 20px;
     font-weight: 500;
     color: #000000;
-}
-
-.tag {
+  }
+  
+  .tag {
     display: inline-block;
     padding: 5px 10px;
     border-radius: 15px;
@@ -291,35 +287,35 @@
     font-weight: 500;
     color: #fff;
     text-align: center;
-}
-
-.professional {
+  }
+  
+  .professional {
     background-color: #e0e0e0;
     color: #000;
-}
-
-.active {
+  }
+  
+  .active {
     background-color: #b8f7c0;
     color: #000;
-}
-
-.renewalDate {
+  }
+  
+  .renewalDate {
     background-color: #b8f7c0;
     color: #000;
-}
-
-/* info */
-
-.infoContainer {
+  }
+  
+  /* info */
+  
+  .infoContainer {
     font-family: Arial, sans-serif;
     max-width: 800px;
     margin: 20px auto;
     border: 1px solid #ddd;
     border-radius: 8px;
-}
-
-
-.infoBox h2 {
+  }
+  
+  
+  .infoBox h2 {
     display: flex;
     align-items: center;
     gap: 4px;
@@ -327,72 +323,72 @@
     color: #333;
     font-weight: 600;
     margin-bottom: 10px;
-    padding: 10px;
+    padding: 0px 10px 10px 10px;
     border-bottom: 1px solid #ddd;
-}
-
-.infoBox p {
+  }
+  
+  .infoBox p {
     line-height: 1.6;
     color: #555;
-}
-
-.infoContent {
+  }
+  
+  .infoContent {
     padding: 0px 10px 10px 10px;
-}
-
-.infoBox ol {
+  }
+  
+  .infoBox ol {
     margin: 15px 0;
     padding-left: 20px;
-}
-
-.infoBox ol li {
+  }
+  
+  .infoBox ol li {
     margin-bottom: 15px;
-    font-weight: normal;
+    font-weight: normal ;
     color: #333;
-}
-
-.infoBox ul {
+  }
+  
+  .infoBox ul {
     margin: 10px 0;
     padding-left: 20px;
-}
-
-.innerList {
+  }
+  
+  .innerList{
     list-style-type: disc !important;
-}
-
-.infoBox ul li {
+  }
+  
+  .infoBox ul li {
     margin-bottom: 10px;
     font-size: 0.9rem;
     font-weight: normal;
     color: #555;
-}
-
-.noteBox {
+  }
+  
+  .noteBox {
     margin-top: 20px;
     padding: 10px;
     border: 1px solid #F6F6F6;
     border-radius: 5px;
     background-color: #F6F6F6;
-}
-
-.noteBox ul {
+  }
+  
+  .noteBox ul {
     padding-left: 20px;
-    list-style-type: disc !important;
-}
-
-.noteBox ul li {
+    list-style-type:disc !important;
+  }
+  
+  .noteBox ul li {
     font-size: 0.9rem;
     color: #555;
-}
-
-/* cards */
-.priceCardContainer {
+  }
+  
+  /* cards */
+  .priceCardContainer {
     display: flex;
     justify-content: center;
     gap: 32px;
-}
-
-.priceCard {
+  }
+  
+  .priceCard {
     padding: 20px 16px 16px 16px;
     border-radius: 16px;
     border: 1px solid #eaecf0;
@@ -400,70 +396,64 @@
     width: 320px;
     display: flex;
     flex-direction: column;
-}
-
-.priceCardPrice {
+  }
+  
+  .priceCardPrice {
     font-size: 30px;
     font-weight: 600;
     line-height: 60px;
     letter-spacing: -0.02em;
     text-align: center;
     color: #101828;
-    margin: 30px 0;
-}
-
-.priceCardAccounts {
+  }
+  
+  .priceCardAccounts {
     font-size: 16px;
-    height: 48px;
     font-weight: 400;
     line-height: 24px;
     text-align: center;
     color: #667085;
-    margin: 7px 0;
-}
-
-.priceCardPlan {
+  }
+  
+  .priceCardPlan {
     font-size: 24px;
     font-weight: 600;
     line-height: 30px;
     text-align: center;
     color: #101828;
-    margin: 20px 0;
-}
-
-.priceCardPlanDesc {
+  }
+  
+  .priceCardPlanDesc {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     text-align: center;
     color: #667085;
     margin-top: 4px;
-}
-
-.enterprise_title {
+  }
+  
+  .enterprise_title{
     margin-top: -25px !important;
-}
-
-.firstFeature {
+  }
+  .firstFeature{
     margin-top: 20px !important;
-}
-
-.priceCardFeatureContainer {
+  }
+  .priceCardFeatureContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    flex-grow: 1;
+    flex-grow: 1; 
     justify-content: start;
-    margin-top: 20px;
+    margin-top:20px;
     margin-bottom: 40px;
-}
-
-.textFree {
-    padding-top: 24px;
-}
-
-.priceCardFeature {
+  }
+  
+  .textFree{
+  padding-top: 24px;
+  }
+  
+  .priceCardFeature {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -473,16 +463,16 @@
     text-align: left;
     width: 100%;
     color: #667085;
-}
-
-.priceCardFeature svg {
+  }
+  
+  .priceCardFeature svg {
     min-width: 24px;
     max-width: 24px;
     min-height: 24px;
     max-height: 24px;
-}
-
-.priceStartBtn {
+  }
+  
+  .priceStartBtn {
     margin-top: auto;
     padding: 12px 24px;
     width: 100%;
@@ -493,19 +483,19 @@
     border: none;
     outline: none;
     font-size: 1rem;
-}
-
-.popularPlan {
+  }
+  
+  .popularPlan {
     position: relative;
-}
-
-.popularPlanWrapper {
+  }
+  
+  .popularPlanWrapper {
     position: absolute;
     right: 20px;
     top: -23px;
-}
-
-.popularPlanWrapper p {
+  }
+  
+  .popularPlanWrapper p {
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
@@ -514,49 +504,26 @@
     position: absolute;
     right: -90px;
     top: -5px;
-}
-
-.enterprisePlanWrapper p {
+  }
+  
+  .enterprisePlanWrapper p {
     right: -70px;
-}
-
-
-.priceHeading {
+  }
+  
+  
+  .priceHeading {
     font-size: 30px;
     font-weight: 700;
     line-height: 72px;
-    margin: 20px 05px;
     text-align: start;
     color: #050315;
-}
-
-@media screen and (max-width: 768px) {
-    .priceCardContainer {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .formSection input {
-        min-width: 100%;
-    }
-
-    .priceCard {
-        width: 100%;
-    }
-
-}
-
-@media screen and (max-width: 450px) {}
-
-
-
-
-
-.priceHeading span {
+  }
+  
+  .priceHeading span {
     color: #5356ff;
-}
-
-.priceDesc {
+  }
+  
+  .priceDesc {
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
@@ -564,46 +531,45 @@
     color: #050315;
     margin-top: 16px;
     margin-bottom: 60px;
-}
-
-
-.listHeading {
+  }
+  
+  
+  .listHeading {
     font-weight: 500 !important;
     color: #000000 !important;
     font-size: 16px !important;
-}
-
-
-/* Media Queries for Responsive Design */
-@media (max-width: 900px) {
-    .container {
-        margin: 10px auto;
-        padding: 10px;
+  }
+  
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 900px) {
+    .p-container {
+      margin: 10px auto;
+      padding: 10px;
     }
-}
-
-@media (max-width: 520px) {
-    .container {
-        margin: 5px auto;
-        padding: 5px;
+  }
+  
+  @media (max-width: 520px) {
+    .p-container {
+      margin: 5px auto;
+      padding: 5px;
     }
-
+  
     .button {
-        font-size: 11px;
-        padding: 8px 10px;
+      font-size: 11px;
+      padding: 8px 10px;
     }
-
-    input[type="text"],
-    input[type="file"],
-    input[type="email"] {
-        width: 100%;
+  
+    input[type="text"], input[type="file"], input[type="email"] {
+      width: 100%;
     }
-
+  
     h2 {
-        font-size: 20px;
+      font-size: 20px;
     }
-
+  
     .goBackIcon {
-        margin-right: 10px;
+      margin-right: 10px;
     }
-}
+  }
+  

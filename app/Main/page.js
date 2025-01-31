@@ -63,11 +63,11 @@ const Page = () => {
   }, [dropdownVisible]);
 
   return (
-    <div>
-      <div className="main-container">
+    <div className="forclr">
         <Sidebar />
-        <div className="main-content" id="content">
           <Header />
+      <div className="main-container">
+        <div className="main-content" id="content">
           <main>
             <div className="content">
               <div className="form-container">

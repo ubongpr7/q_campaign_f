@@ -45,14 +45,14 @@ const Page = () => {
     };
 
     return (
-        <div>
+        <div className="forclr">
             <Sidebar />
             <Header />
             <div className="main-container">
                 <div className="main-content" id="content">
                     <main>
                         <div className="content">
-                            <div className="container">
+                            <div className="p-container">
                                 <div className="header">
                                     {/* <img
                                         src="/assets/arrow-left.png"

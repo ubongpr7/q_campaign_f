@@ -10,7 +10,7 @@ import "/public/Styles/style.css"
 import Link from 'next/link'
 const page = () => {
   return (
-    <div>
+    <div className='forclr'>
       <Sidebar />
       <Header />
       <div class="main-container">

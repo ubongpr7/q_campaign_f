@@ -11,12 +11,12 @@ import Link from 'next/link'
 
 const Pricing = () => {
   return (
-    <>
+    <div className='forclr'>
 
-<Sidebar />
-        <Header />
+      <Sidebar />
+      <Header />
       <div class="main-container">
-        
+
         <main>
           <div class="pricingSection">
             <div class="header">
@@ -83,7 +83,7 @@ const Pricing = () => {
                     Receive dedicated support for ad management.
                   </div>
                 </div>
-            <Link href="/Success" className='linktag'> <button className='priceStartBtn'>Upgrade</button> </Link>
+                <Link href="/Success" className='linktag'> <button className='priceStartBtn'>Upgrade</button> </Link>
 
               </div>
             </div>
@@ -92,7 +92,7 @@ const Pricing = () => {
 
         </main>
       </div>
-    </>
+    </div>
   )
 }
 
