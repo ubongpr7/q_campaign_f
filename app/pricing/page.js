@@ -1,6 +1,5 @@
 "use client"
 import Header from '@/Components/Header/Header'
-import Sidebar from '@/Components/Sidebar/Sidebar'
 import React from 'react'
 import "/public/Styles/Pricing.css"
 import "/public/Styles/side-menu.css"
@@ -13,7 +12,6 @@ const Pricing = () => {
   return (
     <div className='forclr'>
 
-      <Sidebar />
       <Header />
       <div className="main-container">
 

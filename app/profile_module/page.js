@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import "/public/Styles/ProfileModule.css";
 import "/public/Styles/side-menu.css";
 import "/public/Styles/style.css";
-import Sidebar from "@/Components/Sidebar/Sidebar";
 import Header from "@/Components/Header/Header";
 import Link from "next/link";
 
@@ -46,7 +45,6 @@ const Page = () => {
 
     return (
         <div className="forclr">
-            <Sidebar />
             <Header />
             <div className="main-container">
                 <div className="main-content" id="content">

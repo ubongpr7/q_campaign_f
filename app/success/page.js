@@ -11,7 +11,6 @@ import Link from 'next/link'
 const page = () => {
   return (
     <div className='forclr'>
-      <Sidebar />
       <Header />
       <div className="main-container">
         <div className="main-content" id="content"> 
