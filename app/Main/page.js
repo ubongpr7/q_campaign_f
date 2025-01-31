@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import "/public/Styles/side-menu.css";
 import "/public/Styles/style.css";
 import "/public/Styles/home.css";
-import "/public/Styles/font.css";
+// import "/public/Styles/font.css";
 
 import Header from "@/Components/Header/Header";
 import Sidebar from "@/Components/Sidebar/Sidebar";
