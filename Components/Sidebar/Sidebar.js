@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from "react";
 import Image from "next/image";
-
+import Link from "next/link";
 const Sidebar = () => {
     const [activeAccount, setActiveAccount] = useState(1);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -18,9 +18,9 @@ const Sidebar = () => {
         <div id="menu" className="sidebarContainer">
             <div>
                 <div>
-                    <a href="/">
-                        <Image src="/assets/logo-footer.png" alt="Logo" width={200} height={50} className="logoImage" />
-                    </a>
+                    <Link href="/Main">
+                        <img src="/assets/logo-footer.png" alt="Logo" className="logoImage" />
+                    </Link>
                 </div>
                 <hr className="horizontalRule" />
                 <div className="accountsContainer">
@@ -65,7 +65,10 @@ const Sidebar = () => {
                 </div>
             </div>
             <div>
-                <button onClick={() => window.location.href = '/pricing'} className="upgradeButton">Upgrade Plan</button>
+                {/* Correct usage of Link */}
+                <Link href="/Pricing" className="linktag upgradeButton">
+                    Upgrade Plan
+                </Link>
                 <div className="footer">10 Ad accounts on enterprise plan</div>
             </div>
         </div>

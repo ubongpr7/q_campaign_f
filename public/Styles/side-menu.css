@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: 290px;
+    width: 250px;
     background-color: #1E1E1E;
     color: #fff;
     display: flex;
@@ -203,7 +203,7 @@
     font-weight: 400;
     padding: 10px 20px;
     cursor: pointer;
-    border: 2px solid;
+    border: 1px solid;
     border-image-source: linear-gradient(90deg, #5356FF 0%, #378CE7 50%, #67C6E3 100%);
     border-image-slice: 1;
     width: 80%;
@@ -215,6 +215,10 @@
     text-align: center;
 }
 
+.linktag{
+    text-decoration: none;
+
+}
 .upgradeButton:hover {
     background-image: linear-gradient(90deg, #5356FF 0%, #378CE7 50%, #67C6E3 100%);
 }
@@ -239,6 +243,7 @@
     .sidebarContainer {
         transform: translateX(-100%);
         transition: transform 0.3s ease-in-out;
+        width: 290px;
     }
 
     .open {
