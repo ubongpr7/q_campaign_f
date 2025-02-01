@@ -153,7 +153,7 @@ const Page = () => {
                   </div>
                 )}
 
-                <Link href="/compaign_form"><button className="nextButton">Next</button></Link>
+                <Link href="/campaign_form"><button className="nextButton">Next</button></Link>
               </div>
             </div>
           </main>
